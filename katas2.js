@@ -9,16 +9,24 @@ function add(a,b){
 
 // comece a criar a sua função multiply na linha abaixo
 function multiply(a,b){
-    return (a *b);
+    let meuRetorno = 0;
+    for (let i = 0; i < b; i++){
+     meuRetorno = add(a, meuRetorno);
 }
-
+return meuRetorno;
+}
 // descomente a linha seguinte para testar sua função
  console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
 
 
 // comece a criar a sua função power na linha abaixo
 function power(a,b){
-    return (a**b);
+    let meuRetorno = 1;
+    for(let i = 0; i < b; i++){
+        meuRetorno = multiply(a, meuRetorno);
+
+    }
+    return meuRetorno;
 }
 
 // descomente a linha seguinte para testar sua função
@@ -27,13 +35,13 @@ function power(a,b){
 
 // comece a criar a sua função factorial na linha abaixo
 function factorial(a){
-    let meuRetorno = a;
-    for(let i = 1; i < a; i++){
-            meuRetorno = meuRetorno *i;
+    let meuRetorno = 1;
+    for(let i = a; i > 1 ; i--){
+            meuRetorno = multiply ( i , meuRetorno);
     }
     return meuRetorno;
 }
-
+// 
 // descomente a linha seguinte para testar sua função
  console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
